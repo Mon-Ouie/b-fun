@@ -100,7 +100,7 @@ static const char *geometry_shader =
   "void main() {\n"
   "  vec3 a = te_position[2] - te_position[0];\n"
   "  vec3 b = te_position[1] - te_position[0];\n"
-  "  normal = (vec4(normalize(cross(a,b)),1)).xyz;\n"
+  "  normal = normalize(cross(a,b));\n"
   "\n"
   "  for (int i = 0; i < 3; i++) {\n"
   "    gl_Position = gl_in[i].gl_Position;\n"
