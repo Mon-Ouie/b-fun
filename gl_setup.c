@@ -11,6 +11,7 @@ void gl_setup(gl_config *conf) {
 
   SDL_Init(SDL_INIT_VIDEO);
   SDL_SetVideoMode(WindowWidth, WindowHeight, 32, SDL_OPENGL);
+  SDL_WM_SetCaption("Fun with B-Splines", NULL);
   glewInit();
 
   glEnable(GL_DEPTH_TEST);
