@@ -1,4 +1,7 @@
 #include "shaders.h"
+#include "misc.h"
+#include "parameters.h"
+
 #include <string.h>
 #include <stdio.h>
 
@@ -118,20 +121,21 @@ static const char *fragment_shader =
   "\n"
   "in vec3 normal;\n"
   "\n"
-  "const vec3 light = normalize(vec3(1, 0, 1));\n"
-  "\n"
-  "const vec3 ambient  = vec3(0.03, 0.03, 0.03);\n"
-  "const vec3 diffuse  = vec3(0.0, 0.6, 0.6);\n"
-  "const vec3 specular = vec3(0.5, 0.5, 0.5);\n"
-  "const float shininess = 0.3;"
+  "const vec3 light = normalize(vec3 " Stringify(LightPosition) ");\n"
   "const vec3 eye = vec3(0, 0, 1);"
+  "\n"
+  "const vec3 ambient  = vec3" Stringify(AmbientColor)  ";\n"
+  "const vec3 diffuse  = vec3" Stringify(DiffuseColor)  ";\n"
+  "const vec3 specular = vec3" Stringify(SpecularColor) ";\n"
+  "\n"
+  "const float shininess = " Stringify(Shininess) ";\n"
   "\n"
   "out vec4 frag_color;\n"
   "\n"
   "void main() {\n"
   "  vec3 n = normalize(normal);\n"
   "  vec3 s = normalize(light + eye);"
-  "  frag_color = vec4(ambient + abs(dot(light,n))*diffuse "
+  "  frag_color = vec4(ambient + abs(dot(light,n))*diffuse\n"
   "                    + abs(dot(s,n))*shininess*specular, 1);\n"
   "}\n";
 

@@ -1,6 +1,6 @@
 PROGRAM = b-fun
 OBJS = gl_setup.o main.o math_utils.o shaders.o terrain_gen.o
-HEADERS = gl_setup.h math_utils.h parameters.h shaders.h terrain_gen.h
+HEADERS = gl_setup.h math_utils.h misc.h parameters.h shaders.h terrain_gen.h
 
 CFLAGS += -std=c99 -Wall -Wextra -pedantic
 LDLIBS += -lm -lSDL -lGLEW -lGL

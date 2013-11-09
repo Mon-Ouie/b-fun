@@ -88,4 +88,16 @@
 #define RotY 1
 #define RotZ 0
 
+/**
+ * Lighting & Colors (XYZ or RGB)
+ */
+
+#define LightPosition (1, 0, 1)
+
+#define AmbientColor  (0.06, 0.03, 0.03)
+#define DiffuseColor  (0.6, 0.0, 0.0)
+#define SpecularColor (0.8, 0.5, 0.5)
+
+#define Shininess 0.5
+
 #endif
