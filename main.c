@@ -3,7 +3,7 @@
 #include "terrain_gen.h"
 #include "math_utils.h"
 
-#include <SDL/SDL.h>
+#include <SDL.h>
 #include <stdbool.h>
 
 /* Returns the amount of indices to draw. */

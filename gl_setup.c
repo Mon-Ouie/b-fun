@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include <SDL/SDL.h>
+#include <SDL.h>
 
 void gl_setup(gl_config *conf) {
   srand(time(NULL));
