@@ -7,7 +7,6 @@
  * Various parameters to tweak the result. Enjoy!
  */
 
-
 /**
  * Geometry Generation
  */
@@ -21,12 +20,12 @@
 /*
  * Increase this number to reduce the elevation spacing between control points.
  */
-#define NElevation 30
+#define NElevation 10
 
 /*
  * Increase this number to reduce the azimuth spacing between control points.
  */
-#define NAzimuth 30
+#define NAzimuth 10
 
 /*
  * When the elevation step is at this distance of a pole or less, control points
@@ -37,7 +36,7 @@
 /*
  * Increase this number to make hills rarer.
  */
-#define HillRarity 10
+#define HillRarity 5
 
 /*
  * Smallest radius (relative to Radius) that can be generated in hills.
@@ -47,7 +46,7 @@
 /*
  * Greatest radius (relative to Radius) that can be generated in hills.
  */
-#define MaxRadiusFactor 1.5
+#define MaxRadiusFactor 1.8
 
 /**
  * Approximation pattern
@@ -94,10 +93,10 @@
 
 #define LightPosition (1, 0, 1)
 
-#define AmbientColor  (0.06, 0.03, 0.03)
-#define DiffuseColor  (0.6, 0.0, 0.0)
-#define SpecularColor (0.8, 0.5, 0.5)
+#define AmbientColor  (0.03, 0.03, 0.03)
+#define DiffuseColor  (0.0, 0.0, 0.6)
+#define SpecularColor (0.5, 0.5, 0.5)
 
-#define Shininess 0.5
+#define Shininess 1
 
 #endif
