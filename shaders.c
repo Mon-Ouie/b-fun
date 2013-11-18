@@ -205,15 +205,15 @@ static GLuint create_shader(GLenum mode, const char *name,
   GLuint ret = glCreateShader(mode);
   GLint length = strlen(src);
   glShaderSource(ret, 1, &src, &length);
+  glCompileShader(ret);
 
   int status;
   char error[256];
   glGetShaderiv(ret, GL_COMPILE_STATUS, &status);
   glGetShaderInfoLog(ret, sizeof(error), 0, error);
-  if (status)
+  if (!status)
     fprintf(stderr, "%s: compilation error: %s\n", name, error);
 
-  glCompileShader(ret);
   return ret;
 }
 
